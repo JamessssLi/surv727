@@ -1,4 +1,4 @@
-# SURV727 GitHub Practice Exercise
+# SURV727 GitHub In-Class Exercise
 
 This repository is a simple GitHub exercise for students learning the basic collaboration workflow.
 
@@ -18,7 +18,6 @@ You will practice the standard GitHub flow:
 You should not work directly on the main branch in a team project. Instead, create a branch for your own work, such as:
 
 - student-name-mean-score
-- sam-mean-score
 
 This keeps the main branch clean and makes it easier to review changes before merging.
 
@@ -55,9 +54,6 @@ Use this file as your starting point:
 public_data <- read.csv("data/public_data.csv")
 
 # Add your code here to calculate the mean score
-# Example:
-# mean_score <- mean(public_data$score)
-# cat("Mean score:", round(mean_score, 2), "\n")
 ```
 
 ## What to submit
