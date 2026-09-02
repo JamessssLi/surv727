@@ -1,47 +1,67 @@
-# SURV727 GitHub Classroom Demo
+# SURV727 GitHub Practice Exercise
 
-This repository is designed for a simple GitHub teaching exercise.
+This repository is a simple GitHub exercise for students learning the basic collaboration workflow.
 
-## Learning goals
+## Goal
 
-- Fork a repository
-- Make a small change in GitHub
-- Open a pull request
-- Review a pull request
-- Understand why some files should stay local with `.gitignore`
+You will practice the standard GitHub flow:
+
+1. Fork the repository
+2. Create your own branch
+3. Make a small change
+4. Commit your work
+5. Open a pull request
+6. Review the request before it is merged
+
+## Why branches matter
+
+You should not work directly on the main branch in a team project. Instead, create a branch for your own work, such as:
+
+- student-name-mean-score
+- sam-mean-score
+
+This keeps the main branch clean and makes it easier to review changes before merging.
 
 ## Repository layout
 
-- `data/public_data.csv` - public example dataset, tracked by Git
-- `data/secret_data.csv` - local-only dataset, intentionally ignored by Git
-- `analysis.R` - example R script that computes the mean score
-- `.gitignore` - tells Git to ignore the secret file
+- data/public_data.csv - public example dataset
+- data/secret_data.csv - local-only secret data file
+- analysis.R - starter R script for this exercise
+- .gitignore - tells Git to ignore the secret file
 
-## Why the secret file is ignored
+## Important: secret data
 
-The `data/secret_data.csv` file is used to illustrate a sensitive dataset that should not be uploaded to GitHub. It may contain more detailed or identifying information than the public sample. You can still compute summary statistics such as a mean locally, but you only share the safe public version in the repo.
+The file `data/secret_data.csv` is intentionally not uploaded to GitHub. It represents sensitive or private data that should stay on your own computer.
 
-This is the key idea behind `.gitignore`: keep sensitive files on your machine, and only upload data that is safe to make public.
+This is why `.gitignore` matters. Git ignores files listed there, so they are not pushed to GitHub. In a real project, you might keep confidential data locally and only share the public-safe version.
 
-## Class exercise
+## Your class exercise
 
-1. Fork this repository into your own GitHub account.
-2. Create a new branch.
-3. Update the R code in `analysis.R` so it computes the mean score for the public dataset.
-4. Commit the change.
-5. Open a pull request back to the main repository.
-6. In the pull request, briefly explain what you changed and what the mean score is.
+In this assignment, you will work with the public dataset and compute the mean score.
 
-This is a small and realistic example of how GitHub collaboration works in practice.
+1. Fork this repository to your own GitHub account.
+2. Create a new branch in your fork.
+3. Open the file analysis.R.
+4. Add the code to calculate the mean score for the public data.
+5. Commit your change on your branch.
+6. Open a pull request back to the original repository.
+7. In the pull request, briefly describe what you changed.
 
-## Example R code
+## Starter R code
+
+Use this file as your starting point:
 
 ```r
 public_data <- read.csv("data/public_data.csv")
-mean_score <- mean(public_data$score)
-cat("Mean score:", round(mean_score, 2), "\n")
+
+# Add your code here to calculate the mean score
+# Example:
+# mean_score <- mean(public_data$score)
+# cat("Mean score:", round(mean_score, 2), "\n")
 ```
 
-## Instructor note
+## What to submit
 
-The real teaching point is not that the secret file is used in the repo. It is that some data should never be pushed to GitHub. A student can compute a summary on a secret dataset locally and then report only the public result, while the raw sensitive file remains off the repository.
+Your pull request should be a small, clear change. It should show the mean score calculation and nothing unrelated.
+
+This is a basic example of how real GitHub collaboration works in practice.
