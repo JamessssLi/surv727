@@ -1,0 +1,10 @@
+# Local-only sensitive data
+data/secret_data.csv
+
+# OS files
+.DS_Store
+
+# R project artifacts
+.Rhistory
+.RData
+.Rproj.user/
